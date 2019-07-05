@@ -7,7 +7,7 @@ class MP3Importer
     @path = path              #Set attribute path = to filename we initialize with
   end
    #Had to google for Dir method
-  def files
+  def files                                           #only wants mp3 files
     Dir.entries(path).select {|entry| entry.include?(".mp3")}       #select returns an array itself
   end
 
