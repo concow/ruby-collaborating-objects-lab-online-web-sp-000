@@ -12,6 +12,6 @@ class MP3Importer
   end
 
   def import                                                     #imports #files methods returned array. Using that too...
-    files.each {|filename| Song.new_by_filename(filename)}       #Iterates the array, creates new instance in Song Class method that accepts filename argument
+    files.each {|filename| Song.new_by_filename(filename)}       #Iterate the array, creates new instance in Song Class method that accepts filename argument
   end
 end
