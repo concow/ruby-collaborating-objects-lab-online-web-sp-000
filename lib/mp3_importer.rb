@@ -11,7 +11,7 @@ class MP3Importer
     Dir.entries(path).select {|entry| entry.include?(".mp3")}       #select returns an array itself
   end
 
-  def import
+  def import(filename)
 
   end
 end
