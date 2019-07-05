@@ -36,7 +36,10 @@ class Artist
   end
   #@@all.find {|artist| artist == name ? name : Artist.new(name)} Ternary Operator ? is true (artist present) : if false create new one by Artist and .new method
   #Don't forget Artist.new(name) name in parentheses upon creation, we know this by looking at #init
-
+  def self.find(name)
+     self.all.find {|artist| artist.name == name }
+   end
+   
   def print_songs   #Where do we store all of our instances of our artists songs? @songs
     @songs.each do |song|         #print each element inside our list of songs (name only)
       puts song.name              #name is an attribute, its scope is the whole class song.name prints the name only
