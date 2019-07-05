@@ -30,10 +30,9 @@ class Artist
       self.all.find {|artist| artist.name == name }
   end
 
-
-    def self.create(name)
+  def self.create(name)
       self.new(name).tap {|artist| artist.save}
-    end
+  end
   end
     #@@all.find {|artist| artist == name ? name : Artist.new(name)} Ternary Operator ? is true (artist present) : if false create new one by Artist and .new method
   def self.find(name)
