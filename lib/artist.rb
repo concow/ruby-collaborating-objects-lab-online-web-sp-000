@@ -27,7 +27,6 @@ class Artist
     self.all.find {|artist| artist.name == name} || self.new(name).save
 
     #@@all.find {|artist| artist == name ? name : Artist.new(name)} Ternary Operator ? is true (artist present) : if false create new one by Artist and .new method
-    #Don't forget Artist.new(name) name in parentheses upon creation, we know this by looking at #init
   def self.find(name)
      self.all.find {|artist| artist.name == name }
   end
