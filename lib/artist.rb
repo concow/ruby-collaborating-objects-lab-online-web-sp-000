@@ -26,14 +26,6 @@ class Artist
   def self.find_or_create_by_name(name)                         #creates an artist by name maining uniqueness of objects by name property
     self.all.find {|artist| artist.name == name} || self.new(name).save
 
-  #  @@all.find do |artist|                                  #find enumerator to iterate @@all in block tell it what to find
-  #    if artist.name == name                                #if the artist.name (referring to instance.String) is = to the name we pass in. String = String
-  #      return artist                                     #returns the whole object we're parsing through! With our find enumerator
-  #    else
-  #      Artist.new(name)
-  #    end
-    #end
-  end
   #@@all.find {|artist| artist == name ? name : Artist.new(name)} Ternary Operator ? is true (artist present) : if false create new one by Artist and .new method
   #Don't forget Artist.new(name) name in parentheses upon creation, we know this by looking at #init
   def self.find(name)
