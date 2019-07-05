@@ -7,8 +7,8 @@ class Song
   end
   #sets the artist object to belong to the song
   def self.new_by_filename(filename)
-    song_name = file.split(" - ")
-    artist = file.split(" - ")
+    song_name = file.split(" - ")[1]
+    artist = file.split(" - ")[0]
     song = self.new(song_name)
     song.artist.name = artist
     return song
