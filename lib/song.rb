@@ -8,8 +8,9 @@ class Song
   #sets the artist object to belong to the song
   def artist_name=(name)
     self.artist = Artist.find_or_create_by_name(name)
-    self.artist.add_song(self)
     binding.pry
+    self.artist.add_song(self)
+
   end
 
 end
