@@ -25,6 +25,8 @@ class Artist
   #class method: create an artist. queryng artist class variable @@all that returns all artist instances
   def self.find_or_create_by_name(name)                         #creates an artist by name maining uniqueness of objects by name property
     self.all.find {|artist| artist.name == name} || self.new(name).save
+    self.find(name) ? self.find(name) : self.create(name)
+
   end
     #@@all.find {|artist| artist == name ? name : Artist.new(name)} Ternary Operator ? is true (artist present) : if false create new one by Artist and .new method
   def self.find(name)
