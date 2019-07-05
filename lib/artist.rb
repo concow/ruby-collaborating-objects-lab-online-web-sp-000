@@ -26,6 +26,7 @@ class Artist
   def self.find_or_create_by_name(name)                         #creates an artist by name maining uniqueness of objects by name property
     self.all.find {|artist| artist.name == name} || self.new(name).save
     #self.find(name) ? self.find(name) : self.create(name)
+  end
   def self.find(name)
       self.all.find {|artist| artist.name == name }
   end
