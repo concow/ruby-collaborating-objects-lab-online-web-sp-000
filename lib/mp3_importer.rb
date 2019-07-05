@@ -12,7 +12,7 @@ class MP3Importer
   end
 
   def import                                                     #imports files(in array form) its received from #files method
-    files.each {|filename| Song.new_by_filename(filename)}       #Iterates the array, creates new instance in Song Class
+    files.each {|filename| Song.new_by_filename(filename)}       #Iterates the array, creates new instance in Song Class method
 
   end
 end
