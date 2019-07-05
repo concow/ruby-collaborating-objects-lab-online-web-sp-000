@@ -1,4 +1,4 @@
-#parses a directory of files and sends the filenames to a song class
+#parses a directory of files and sends the filenames to a song class to create a library of music with artists that are unique.
 class MP3Importer
 
   attr_accessor :path             #Path attribute
