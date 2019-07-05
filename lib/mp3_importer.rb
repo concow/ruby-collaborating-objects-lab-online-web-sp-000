@@ -11,7 +11,7 @@ class MP3Importer
     Dir.entries(path).select {|entry| entry.include?(".mp3")}       #select returns an array itself
   end
 
-  def import                                                     #imports files(in array form) its received from #files method
+  def import                                                     #imports #files methods returned array
     files.each {|filename| Song.new_by_filename(filename)}       #Iterates the array, creates new instance in Song Class method that accepts filename argument
   end
 end
